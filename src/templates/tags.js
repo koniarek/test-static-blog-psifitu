@@ -7,8 +7,8 @@ class TagRoute extends Component {
   render () {
     const posts = this.props.data.allMarkdownRemark.edges
     const postLinks = posts.map(post => (
-      <div key={post.node.fields.slug} className='pv4 bb bt b--black-10 ph3 ph0-l'>
-        <Link to={post.node.fields.slug} className='link dim no-underline black'>
+      <div key={post.node.fields.slug} className='pv4 bb bt white ph3 ph0-l'>
+        <Link to={post.node.fields.slug} className='link dim no-underline white'>
           <h2 className='if3 f2-m f-subheadline-l measure lh-title fw1 mt0 mb0'>{post.node.frontmatter.title}</h2>
         </Link>
       </div>
@@ -29,7 +29,7 @@ class TagRoute extends Component {
               <h3 className='f2 lh-title fw4 mb3 mt0 pt3 bw2 avenir'>{tagHeader}</h3>
               <div className='taglist'>{postLinks}</div>
               <p className='mb5'>
-                <Link to='/tags/' className='no-underline black dim avenir'>
+                <Link to='/tags/' className='no-underline white dim avenir'>
                   Browse all tags
                 </Link>
               </p>

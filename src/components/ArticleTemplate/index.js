@@ -30,7 +30,7 @@ const ArticleTemplate = ({
                   <Link
                     to={`/tags/${_.kebabCase(tag)}`}
                     key={tag}
-                    className='no-underline black dim avenir'
+                    className='no-underline white dim avenir'
                   >
                     <small className='f6 f4-l fw1'>#{tag}&nbsp;&nbsp;</small>
                   </Link>
@@ -49,7 +49,7 @@ const ArticleTemplate = ({
       }
       <section className='mw8 center'>
         <div className='ph3 ph4-m ph5-l'>
-          <PostContent content={content} className={'measure db center f5 f4-ns lh-copy'} />
+          <PostContent content={content} className={'measure db center f5 f4-ns lh-copy white'} />
         </div>
       </section>
     </article>

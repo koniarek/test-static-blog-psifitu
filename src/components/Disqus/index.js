@@ -19,7 +19,7 @@ class Disqus extends Component {
 
   notifyAboutComment () {
     const toasts = this.state.toasts.slice()
-    toasts.push({ text: 'New comment available!' })
+    toasts.push({ text: 'Nowy komentarz został dodany!' })
     this.setState({ toasts })
   }
 

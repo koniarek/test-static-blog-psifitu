@@ -40,7 +40,7 @@ const ContactForm = () => {
         handleSubmit,
         handleReset,
       }) => (
-        <form className='pa5 black-80 measure center'
+        <form className='pa5 white-80 measure center'
           name='contact'
           onSubmit={handleSubmit}
           onReset={handleReset}
@@ -55,9 +55,9 @@ const ContactForm = () => {
             </label>
           </div>
           <div className='mt3'>
-            <label htmlFor='name' className='f6 b db mb2'>Name</label>
+            <label htmlFor='name' className='f6 b db mb2'>Imię i Nazwisko</label>
             <Field
-              className='db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2'
+              className='db border-box hover-black w-100 measure ba b--white-20 pa2 br2 mb2'
               type='text'
               name='name'
             />
@@ -66,16 +66,16 @@ const ContactForm = () => {
           <div className='mt3'>
             <label htmlFor='email' className='f6 b db mb2'>Email</label>
             <Field
-              className='db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2'
+              className='db border-box hover-black w-100 measure ba b--white-20 pa2 br2 mb2'
               type='text'
               name='email'
             />
             {touched.email && errors.email && <p className='f6 red'>{errors.email}</p>}
           </div>
           <div className='mt3 mb3'>
-            <label htmlFor='message' className='f6 b db mb2'>Message</label>
+            <label htmlFor='message' className='f6 b db mb2'>Wiadomość</label>
             <Field
-              className='db border-box hover-black w-100 measure ba b--black-20 pa2 br2 mb2'
+              className='db border-box hover-black w-100 measure ba b--white-20 pa2 br2 mb2'
               name='message'
               component='textarea'
               rows='6'
@@ -84,10 +84,10 @@ const ContactForm = () => {
           </div>
           <div className='mt5 measure tr'>
             <input type='reset' value='Clear'
-              className='b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib mr3' />
+              className='b ph3 pv2 input-reset ba b--white bg-transparent grow pointer f6 dib mr3' />
             <input name='submit' type='submit' value='Send Message'
               disabled={isSubmitting}
-              className='b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib' />
+              className='b ph3 pv2 input-reset ba b--white bg-transparent grow pointer f6 dib' />
           </div>
         </form>
       )}

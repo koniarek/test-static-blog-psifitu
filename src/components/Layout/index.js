@@ -5,22 +5,26 @@ import config from '../../../config'
 import Footer from '../Footer'
 import Header from '../Header'
 
-const Layout = (props) => (
-  <Fragment>
-    <Helmet>
-      <title>{config.siteTitle}</title>
-      <meta name='description' content={config.siteDescription} />
-      <meta
-        name='viewport'
-        content='width=device-width, initial-scale=1, user-scalable=no'
-      />
-    </Helmet>
-    <div className='wrapper'>
-      <Header />
-      <div>{props.children}</div>
-      <Footer config={config} />
+const Layout = (props) => {
+  return (
+    <div className='bg-black-60'>
+      <Fragment>
+        <Helmet>
+          <title>{config.siteTitle}</title>
+          <meta name='description' content={config.siteDescription} />
+          <meta
+            name='viewport'
+            content='width=device-width, initial-scale=1, user-scalable=no'
+          />
+        </Helmet>
+        <div className='wrapper'>
+          <Header />
+          <div>{props.children}</div>
+          <Footer config={config} />
+        </div>
+      </Fragment>
     </div>
-  </Fragment>
-)
+  )
+}
 
 export default Layout

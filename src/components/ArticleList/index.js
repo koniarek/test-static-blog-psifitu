@@ -10,10 +10,10 @@ const ArticleList = ({ posts }) => {
         .filter(post => post.node.frontmatter.templateKey === 'article-page')
         .map(({ node: post }) => {
           return (
-            <article key={post.id} className='pv4 bb b--black-10 ph3 ph0-l'>
+            <article key={post.id} className='pv4 bb white ph3 ph0-l hover-light-red'>
               <div className='flex flex-column flex-row-ns'>
                 <div className='w-100 w-60-ns pr3-ns order-2 order-1-ns'>
-                  <Link className='db ph0-l no-underline black dim' to={post.fields.slug}>
+                  <Link className='db ph0-l no-underline white dim hover-light-red' to={post.fields.slug}>
                     <h1 className='f3 fw1 baskerville mt0 lh-title'>{post.frontmatter.title}</h1>
                     <p className='f6 f5-l lh-copy fw1'>
                       {post.excerpt}
@@ -21,7 +21,7 @@ const ArticleList = ({ posts }) => {
                   </Link>
                 </div>
                 <div className='pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns'>
-                  <Link className='db ph0-l no-underline black grow' to={post.fields.slug}>
+                  <Link className='db ph0-l no-underline white grow' to={post.fields.slug}>
                     {!!post.frontmatter.cover && !!post.frontmatter.cover.childImageSharp
                       ? <Img className='db'
                         fluid={post.frontmatter.cover.childImageSharp.fluid}
@@ -33,13 +33,13 @@ const ArticleList = ({ posts }) => {
                   </Link>
                 </div>
               </div>
-              <time className='f6 db gray'>{post.frontmatter.date}</time>
+              <time className='f6 db white'>{post.frontmatter.date}</time>
               <div className='flex pv2 ph0'>
                 {post.frontmatter.tags.map(tag => (
                   <Link
                     to={`/tags/${_.kebabCase(tag)}`}
                     key={tag}
-                    className='no-underline black dim'
+                    className='no-underline white dim'
                   >
                     <small>#{tag} &nbsp;</small>
                   </Link>
